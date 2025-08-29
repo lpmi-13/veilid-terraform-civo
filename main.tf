@@ -18,13 +18,6 @@ provider "civo" {
   region = "LON1"
 }
 
-resource "civo_firewall" "veilid" {
-  name                 = "veilid-firewall"
-  create_default_rules = true
-  network_id           = civo_network.veilid.id
-
-}
-
 resource "civo_network" "veilid" {
   label = "veilid-network"
 }
@@ -37,6 +30,7 @@ data "civo_disk_image" "ubuntu_24" {
 }
 
 resource "civo_instance" "veilid" {
+  count       = local.number_of_instances
   hostname    = "veilid"
   tags        = ["veilid"]
   notes       = "running a veilid instance"
