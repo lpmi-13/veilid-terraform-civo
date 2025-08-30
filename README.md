@@ -2,7 +2,7 @@
 
 ## Cost
 
-The configuration in this repo (micro instance for compute with 10GB of local storage) will cost about $5/month. They don't charge for IPv4 addresses on instances, so we'll run this in dual-stack (IPv4/IPv6 connectivity).
+The configuration in this repo will cost about $5/month. They don't charge for IPv4 addresses on instances, so we'll run this in dual-stack (IPv4/IPv6 connectivity). Civo is also giving out $250 in free credits at time of writing, which would run one veilid node with this repo's configuration for about 4 years.
 
 ## Setting up access
 
@@ -42,4 +42,4 @@ and you can connect via ssh like so:
 ssh -i ROUTE_TO_PRIVATE_KEY veilid@IP_ADDRESS_FROM_OUTPUT
 ```
 
-> NOTE: since the cloud init script takes a bit of time to run, if you SSH in immediately, you might not have access to the `veilid-cli` command for a minute or so.
+> NOTE: Since the running of the initial setup-veilid.sh script counts as part of the instance's startup, it should take about 4-5 minutes for it to be created.

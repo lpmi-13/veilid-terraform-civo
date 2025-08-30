@@ -51,5 +51,5 @@ resource "civo_instance" "veilid" {
 
 resource "civo_ssh_key" "veilid" {
   name       = "veilid-key"
-  public_key = file("./veilid-key.pub")
+  public_key = file("./PATH_TO_PUBLIC_KEY_HERE")
 }

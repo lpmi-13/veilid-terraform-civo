@@ -13,7 +13,7 @@ echo 'veilid ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/veilid
 
 # Add SSH key
 mkdir -p /home/veilid/.ssh
-echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDt+tQz7i6Egl61UeMrjgRoQxKFiNr0EJFE+8baQsg+I" >> /home/veilid/.ssh/authorized_keys
+echo "CONTENTS_OF_PUBLIC_SSH_KEY_HERE" >> /home/veilid/.ssh/authorized_keys
 chown -R veilid:veilid /home/veilid/.ssh
 chmod 700 /home/veilid/.ssh
 chmod 600 /home/veilid/.ssh/authorized_keys
