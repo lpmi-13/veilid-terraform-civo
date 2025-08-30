@@ -30,12 +30,16 @@ data "civo_disk_image" "ubuntu_24" {
 }
 
 resource "civo_instance" "veilid" {
-  count       = local.number_of_instances
-  hostname    = "veilid"
-  tags        = ["veilid"]
-  notes       = "running a veilid instance"
-  firewall_id = civo_firewall.veilid.id
-  network_id  = civo_network.veilid.id
+  count    = local.number_of_instances
+  hostname = "veilid"
+  # this is the part that lets us connect without a password
+  initial_user = "veilid"
+  tags         = ["veilid"]
+  notes        = "running a veilid instance"
+  firewall_id  = civo_firewall.veilid.id
+  network_id   = civo_network.veilid.id
+  # it looks like this is how you set it to not have an attached volume, which we don't need
+  volume_type = "standard"
   # this is the smallest possible instance
   size       = "g4s.xsmall"
   disk_image = data.civo_disk_image.ubuntu_24.diskimages[0].id
