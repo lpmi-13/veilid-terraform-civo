@@ -2,11 +2,11 @@
 
 ## Cost
 
-The configuration in this repo will cost about $5/month. They don't charge for IPv4 addresses on instances, so we'll run this in dual-stack (IPv4/IPv6 connectivity). Civo is also giving out $250 in free credits at time of writing, which would run one veilid node with this repo's configuration for about 4 years.
+The configuration in this repo will cost about $5/month. They don't charge for IPv4 addresses on instances, so we'll run this in dual-stack (IPv4/IPv6 connectivity). Civo is also giving out $250 in free credits, but it expires after one month, which is a bit crap.
 
 ## Setting up access
 
-1. Sign up for a [Civo account](https://civo.com/) if you don't already have one. You need to jump through a few hoops setting your billing details, but it's not too bad (and you get $250 of free credits! At $5~ish/month, this should keep a veilid node with the config in this repo running for free for well over 3 years)
+1. Sign up for a [Civo account](https://civo.com/) if you don't already have one. You need to jump through a few hoops setting your billing details, but it's not too bad.
 
 2. Install the [Civo CLI](https://www.civo.com/docs/overview/civo-cli#installation)
 
