@@ -45,7 +45,8 @@ resource "civo_instance" "veilid" {
   disk_image = data.civo_disk_image.ubuntu_24.diskimages[0].id
   sshkey_id  = civo_ssh_key.veilid.id
 
-  script = file("./setup-veilid.yaml")
+  # I would have preferred a cloud-init in yaml, but apparently civo HAS to run a shell script
+  script = file("./setup-veilid.sh")
 }
 
 resource "civo_ssh_key" "veilid" {
