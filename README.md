@@ -2,7 +2,9 @@
 
 ## Cost
 
-The configuration in this repo will cost about $5/month. They don't charge for IPv4 addresses on instances, so we'll run this in dual-stack (IPv4/IPv6 connectivity). Civo is also giving out $250 in free credits, but it expires after one month, which is a bit crap.
+The configuration in this repo will cost about $5/month. They don't charge for IPv4 addresses on instances, so that comes included in instance pricing.
+
+Civo is also giving out $250 in free credits, but it expires after one month, which is a bit crap.
 
 ## Setting up access
 
